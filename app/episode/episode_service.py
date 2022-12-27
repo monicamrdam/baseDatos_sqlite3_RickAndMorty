@@ -1,6 +1,6 @@
 import requests
 from app.episode.episode import Episode
-from app.bbdd_RickAndMorty.bbdd_service import SqliteService
+from app.bbdd_RickAndMorty.bbdd_RickMorty_service import SqliteService
 
 class EpisodeService:
     def __init__(self):

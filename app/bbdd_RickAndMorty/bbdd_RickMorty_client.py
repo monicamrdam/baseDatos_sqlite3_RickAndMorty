@@ -1,10 +1,11 @@
 import sqlite3 as sql
+from config import Config
 
 class RickAndMortySqliteClient:
 
     @staticmethod
-    def get_bbdd():
-        conn = sql.connect('bbdd_RickAndMorty.db')
+    def get_db():
+        conn = sql.connect(Config.DB_PATH_RICKANDMORTY)
         return conn
 
     @staticmethod
@@ -20,7 +21,7 @@ class RickAndMortySqliteClient:
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL)""",
         ]
-        db = RickAndMortySqliteClient.get_bbdd()
+        db = RickAndMortySqliteClient.get_db()
         cursor = db.cursor()
         for table in tables:
             cursor.execute(table)

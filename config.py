@@ -9,7 +9,9 @@ load_dotenv()
 class Config:
     URL_PORT = 'http://127.0.0.1:9000/'
 
-    DB_PATH = "/home/monica/Escritorio/PYTHON_Alberto/baseDeDatos/base_de_datos_sqlite3_copia_copia/app/rest_api_sql/rest_api.db"
+    DB_PATH_SPOTIFY = "/home/monica/Escritorio/PYTHON_Alberto/baseDeDatos/baseDatos_RickAndMorty _Spotify/app/bbdd_Spotify/db_Spotify.db"
+    DB_PATH_RICKANDMORTY = "/home/monica/Escritorio/PYTHON_Alberto/baseDeDatos/baseDatos_RickAndMorty _Spotify/app/bbdd_RickAndMorty/db_RickAndMorty.db"
+
 
     URL_Search = 'https://api.spotify.com/v1/search'
     URL_Artist = 'https://api.spotify.com/v1/artists'
