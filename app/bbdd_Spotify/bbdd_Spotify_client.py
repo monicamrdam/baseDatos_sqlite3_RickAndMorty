@@ -1,10 +1,10 @@
 import sqlite3 as sql
 
-class RickAndMortySqliteClient:
+class SpotifySqliteClient:
 
     @staticmethod
     def get_bbdd():
-        conn = sql.connect('bbdd_RickAndMorty.db')
+        conn = sql.connect('bbdd_Spotify.db')
         return conn
 
     @staticmethod
@@ -20,7 +20,7 @@ class RickAndMortySqliteClient:
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL)""",
         ]
-        db = RickAndMortySqliteClient.get_bbdd()
+        db = SpotifySqliteClient.get_bbdd()
         cursor = db.cursor()
         for table in tables:
             cursor.execute(table)
