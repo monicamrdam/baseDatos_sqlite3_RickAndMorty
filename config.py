@@ -4,14 +4,12 @@ from dotenv import load_dotenv
 # Carga las variables de entorno en memoria
 # Carga todo el contenido de .flaskenv en variables de entorno
 load_dotenv()
-
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
     URL_PORT = 'http://127.0.0.1:9000/'
 
-    DB_PATH_SPOTIFY = "/home/monica/Escritorio/PYTHON_Alberto/baseDeDatos/baseDatos_RickAndMorty _Spotify/app/bbdd_Spotify/db_Spotify.db"
-    DB_PATH_RICKANDMORTY = "/home/monica/Escritorio/PYTHON_Alberto/baseDeDatos/baseDatos_RickAndMorty _Spotify/app/bbdd_RickAndMorty/db_RickAndMorty.db"
-
+    DATABASE_URI = os.environ.get('DB_PATH') or os.path.join(basedir, 'db_RAndM_Spotify.db')
 
     URL_Search = 'https://api.spotify.com/v1/search'
     URL_Artist = 'https://api.spotify.com/v1/artists'
