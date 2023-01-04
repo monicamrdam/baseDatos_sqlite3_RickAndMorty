@@ -1,20 +1,18 @@
 from app import app
 from flask import jsonify
 from config import Config
-from app.bbdd_RickAndMorty.bbdd_RickMorty_client import RickAndMortySqliteClient
-from app.bbdd_Spotify.bbdd_Spotify_client import SpotifySqliteClient
+from app.db_RickAndMorty_Spotify_client import Db_RickAndMorty_Spotify
 
 
 @app.route('/')
 def home():
-    RickAndMortySqliteClient.create_tables()
-    SpotifySqliteClient.create_tables()
+    Db_RickAndMorty_Spotify.create_table_characters()
+    Db_RickAndMorty_Spotify.create_table_episode()
+    Db_RickAndMorty_Spotify.create_table_artist()
     message = {
         "Home": Config.URL_PORT,
         "Characters": Config.URL_PORT + 'characters',
         "Episodes": Config.URL_PORT + 'episodes',
         "Artist":Config.URL_PORT + 'artist?name=',
-        "BBDD_RickAndMorty": Config.URL_PORT + 'db_RickAndMorty',
-        "BBDD_Spotify": Config.URL_PORT + 'db_Spotify',
     }
     return jsonify(message)
