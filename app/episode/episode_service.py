@@ -1,10 +1,18 @@
 import requests
 from app.episode.episode import Episode
-from app.bbdd_RickAndMorty.bbdd_RickMorty_service import SqliteService
+from app.episode.episode_client import EpisodeClient
 
 class EpisodeService:
     def __init__(self):
         pass
+
+    @staticmethod
+    def insert_episode(name):
+        db = EpisodeClient.get_db()
+        cursor = db.cursor()
+        statement = "INSERT INTO episodes (name) VALUES (?)"
+        cursor.execute(statement, [name])
+        db.commit()
 
 
     @staticmethod
@@ -14,5 +22,5 @@ class EpisodeService:
         data_episode = r.json()
         for j in data_episode['results']:
             episodes = Episode((j['name']))
-            SqliteService.insert_episode(episodes.name)
+            EpisodeService.insert_episode(episodes.name)
         return 'Insertados datos en la tabla episodes'

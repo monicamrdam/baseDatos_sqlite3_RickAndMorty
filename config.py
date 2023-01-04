@@ -9,7 +9,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config:
     URL_PORT = 'http://127.0.0.1:9000/'
 
-    DATABASE_URI = os.environ.get('DB_PATH') or os.path.join(basedir, 'db_RAndM_Spotify.db')
+    DATABASE_URI = os.environ.get('DB_PATH') or os.path.join(basedir, 'app/db_RAndM_Spotify.db')
 
     URL_Search = 'https://api.spotify.com/v1/search'
     URL_Artist = 'https://api.spotify.com/v1/artists'
