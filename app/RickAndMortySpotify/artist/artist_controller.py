@@ -1,5 +1,5 @@
 from flask import request, Blueprint
-from app.artist.artist_service import SpotifyService
+from app.RickAndMortySpotify.artist.artist_service import SpotifyService
 
 artist_page = Blueprint('artist_page', __name__)
 

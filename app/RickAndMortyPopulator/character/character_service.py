@@ -1,6 +1,7 @@
+
 import requests
-from app.character.character import Character
-from app.character.rick_and_morty_client import  RickAndMortyClient
+from app.RickAndMortyPopulator.character.character import Character
+from app.RickAndMortyPopulator.character.character_client import  RickAndMortyClient
 
 class RickAndMortyService:
     def __init__(self):

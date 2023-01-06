@@ -1,6 +1,6 @@
 import requests
-from app.episode.episode import Episode
-from app.episode.episode_client import EpisodeClient
+from app.RickAndMortyPopulator.episode.episode import Episode
+from app.RickAndMortyPopulator.episode.episode_client import EpisodeClient
 
 class EpisodeService:
     def __init__(self):

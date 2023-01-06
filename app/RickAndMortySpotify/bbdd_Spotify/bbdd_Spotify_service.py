@@ -1,4 +1,4 @@
-from app.bbdd_Spotify.bbdd_Spotify_client import SpotifySqliteClient
+from app.RickAndMortySpotify.bbdd_Spotify.bbdd_Spotify_client import SpotifySqliteClient
 
 
 class SqliteService:

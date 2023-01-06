@@ -1,7 +1,7 @@
 from flask import Flask
-from app.character.character_controller import characters_page
-from app.episode.episode_controller import episodes_page
-from app.artist.artist_controller import artist_page
+from app.RickAndMortyPopulator.character.character_controller import characters_page
+from app.RickAndMortyPopulator.episode.episode_controller import episodes_page
+from app.RickAndMortySpotify.artist.artist_controller import artist_page
 
 app = Flask(__name__)
 

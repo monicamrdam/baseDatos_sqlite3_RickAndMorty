@@ -1,6 +1,6 @@
 from flask import Blueprint
-from app.episode.episode_client import EpisodeClient
-from app.episode.episode_service import EpisodeService
+from app.RickAndMortyPopulator.episode.episode_client import EpisodeClient
+from app.RickAndMortyPopulator.episode.episode_service import EpisodeService
 
 episodes_page = Blueprint('episodes_page', __name__)
 

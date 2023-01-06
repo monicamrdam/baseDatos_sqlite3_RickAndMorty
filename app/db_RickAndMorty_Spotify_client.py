@@ -1,6 +1,6 @@
-from app.episode.episode_client import EpisodeClient
-from app.character.rick_and_morty_client import RickAndMortyClient
-from app.artist.artist_topTracks import TopTracks
+from app.RickAndMortyPopulator.episode.episode_client import EpisodeClient
+from app.RickAndMortyPopulator.character.character_service import RickAndMortyClient
+from app.RickAndMortySpotify.artist.artist_topTracks import TopTracks
 
 
 class Db_RickAndMorty_Spotify:
