@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 basedir = os.path.abspath(os.path.dirname(__file__))
 
+
 class Config:
     URL_PORT = 'http://127.0.0.1:9000/'
 

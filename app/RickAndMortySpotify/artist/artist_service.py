@@ -1,7 +1,7 @@
 from app.RickAndMortySpotify.artist.artist_client import SpotifyClient
 from app.RickAndMortySpotify.artist.artist import Artist
 from app.RickAndMortySpotify.artist.artist_topTracks import TopTracks
-from app.RickAndMortySpotify.bbdd_Spotify.bbdd_Spotify_service import SqliteService
+from app.RickAndMortySpotify.artist.bbdd_Spotify.bbdd_Spotify_service import SqliteService
 
 class SpotifyService:
     def __init__(self):

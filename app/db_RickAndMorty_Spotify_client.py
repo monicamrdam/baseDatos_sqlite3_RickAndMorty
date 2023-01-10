@@ -1,18 +1,18 @@
-from app.RickAndMortyPopulator.episode.episode_client import EpisodeClient
-from app.RickAndMortyPopulator.character.character_service import RickAndMortyClient
-from app.RickAndMortySpotify.artist.artist_topTracks import TopTracks
+from app.RickAndMortyPopulator.episode.episode_repository import EpisodeRepository
+from app.RickAndMortyPopulator.character.character_repository import CharacterRepository
+from app.RickAndMortySpotify.artist.artist_repository import ArtistRepository
 
 
-class Db_RickAndMorty_Spotify:
+class DbRickAndMortySpotify:
 
     @staticmethod
     def create_table_characters():
-        RickAndMortyClient.create_tables()
+        CharacterRepository.create_tables()
 
     @staticmethod
     def create_table_episode():
-        EpisodeClient.create_tables()
+        EpisodeRepository.create_tables()
 
     @staticmethod
     def create_table_artist():
-        TopTracks.create_tables()
+        ArtistRepository.create_tables()
