@@ -5,7 +5,7 @@ class SpotifySqliteClient:
 
     @staticmethod
     def get_db():
-        conn = sql.connect(Config.DB_PATH_SPOTIFY)
+        conn = sql.connect(Config.DATABASE_URI)
         return conn
 
     @staticmethod

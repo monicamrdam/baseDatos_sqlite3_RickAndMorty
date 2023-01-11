@@ -4,9 +4,6 @@ from config import Config
 
 class SpotifyClient:
 
-    def __init__(self):
-        pass
-
     @staticmethod
     def authorization():
         client_id = Config.CLIENT_ID
@@ -49,7 +46,6 @@ class SpotifyClient:
         print(featured_playlists_url_artist)
         response_artist = requests.get(featured_playlists_url_artist, headers=SpotifyClient.authorization())
         print((response_artist.json()).keys())
-
         return response_artist.json()
 
     @staticmethod
