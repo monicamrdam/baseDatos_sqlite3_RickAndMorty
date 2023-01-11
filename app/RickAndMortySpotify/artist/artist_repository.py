@@ -53,5 +53,14 @@ class ArtistRepository:
     def get_one_where_name_artist(name):
         db = ArtistRepository.get_db()
         cursor = db.cursor()
+        print("SELECT * FROM artist WHERE name='" + name +"'")
         res = cursor.execute("SELECT * FROM artist WHERE name='" + name +"'")
+
+        return res
+
+    @staticmethod
+    def get_track_where_uuid_artist(uuid_artist):
+        db = ArtistRepository.get_db()
+        cursor = db.cursor()
+        res = cursor.execute("SELECT * FROM top_artist WHERE uuid_artist='" + uuid_artist + "'")
         return res
